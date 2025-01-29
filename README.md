@@ -51,9 +51,44 @@ To provide a visual overview of the SOC Home Lab architecture, refer to the netw
 
 ![Network Diagram](https://github.com/kdcervantes/SOC-Home-Lab/blob/main/SOC%20Network%20Diagram.jpg)
 
-Cloud Environment Setup:
-Provision virtual machines (VMs) with appropriate operating systems.
-Configure private networking with a subnet (e.g., 172.31.0.0/24).
+### Cloud Environment Setup:
+Vultr VPC 2.0 allows me to create a private, isolated network to securely connect all my SOC components.
+
+Step 1: Creating the VPC 2.0 Network
+Navigated to VPC 2.0 in the Vultr dashboard.
+Created a new private network with the following details:
+VPC Name: SOC-Home-Lab
+CIDR Block: 172.31.0.0/24
+Subnet Mask: 255.255.255.0
+IP Range: 172.31.0.1 - 172.31.0.254
+Enabled private networking for internal communication between SOC components.
+
+Step 2: Configuring Firewall Rules
+Created security groups for network segmentation.
+Configured Firewall Rules to restrict traffic between machines:
+Allow SSH (Port 22) from Analyst Laptop
+Allow RDP (Port 3389) for Windows Server
+Allow Fleet Server to communicate with ELK Stack
+Deny inbound traffic from Attack Laptop to ELK Stack
+
+Step 3: Deploying Virtual Machines
+With the VPC 2.0 configured, I am now deploying the necessary machines.
+
+Machine	OS	Role	Private IP
+ELK Stack	Ubuntu 22.04	SIEM & log management	172.31.0.10
+Fleet Server	Ubuntu 22.04	Endpoint monitoring (Elastic)	172.31.0.11
+Windows Server	Windows 2022	Log forwarding (RDP enabled)	172.31.0.20
+Ubuntu Server	Ubuntu 22.04	SSH-enabled logging server	172.31.0.21
+Mythic C2	Ubuntu 22.04	Attack simulation platform	172.31.0.200
+OS Ticket	Ubuntu 22.04	Incident management system	172.31.0.30
+
+Next Steps
+Now that the Vultr VPC and virtual machines are deployed, the following steps include:
+
+Installing and Configuring ELK Stack for log collection.
+Setting up Fleet Server & Elastic Agents for endpoint monitoring.
+Deploying Velociraptor for threat hunting.
+Configuring network security policies to restrict unauthorized access.
 
 ELK Stack Deployment:
 Install Elasticsearch, Logstash, and Kibana on a dedicated VM.
