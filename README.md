@@ -49,7 +49,7 @@ The lab incorporates the following tools:
 The following steps outline the process of setting up the SOC Home Lab:
 To provide a visual overview of the SOC Home Lab architecture, refer to the network diagram below:
 
-![Network Diagram](diagrams/SOC-Home-Lab.png)
+![Network Diagram](https://github.com/kdcervantes/SOC-Home-Lab/blob/main/SOC%20Network%20Diagram.jpg)
 
 Cloud Environment Setup:
 Provision virtual machines (VMs) with appropriate operating systems.
