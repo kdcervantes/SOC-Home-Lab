@@ -49,7 +49,7 @@ The lab incorporates the following tools:
 The following steps outline the process of setting up the SOC Home Lab:
 To provide a visual overview of the SOC Home Lab architecture, refer to the network diagram below:
 
-![Network Diagram](![image](https://github.com/user-attachments/assets/ddddc44f-6d7c-448d-a70f-be39f265493b)
+![Network Diagram](https://github.com/user-attachments/assets/ddddc44f-6d7c-448d-a70f-be39f265493b)
 )
 
 ### Cloud Environment Setup:
