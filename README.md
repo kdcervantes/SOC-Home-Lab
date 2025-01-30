@@ -76,7 +76,7 @@ Step 3: Deploying Virtual Machines
  - With the VPC 2.0 configured, I am now deploying the necessary machines.
 
 Machine	OS	Role	Private IP
- - ELK Stack	Ubuntu 22.04	SIEM & log management	172.31.0.10
+ - ELK Stack	Ubuntu 22.04	SIEM & log management	172.31.0.03
  - Fleet Server	Ubuntu 22.04	Endpoint monitoring (Elastic)	172.31.0.11
  - Windows Server	Windows 2022	Log forwarding (RDP enabled)	172.31.0.20
  - Ubuntu Server	Ubuntu 22.04	SSH-enabled logging server	172.31.0.21
