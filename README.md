@@ -16,10 +16,9 @@ Throughout the development and utilization of this SOC Home Lab, the following s
 
 Endpoint Security Management:
   - Setting up Fleet Server to manage Elastic Agents across various endpoints.
-  - Utilizing Velociraptor for in-depth endpoint monitoring and threat hunting.
-  - Threat Hunting and Incident Response:
-
-Simulating attack scenarios using Mythic C2 and Kali Linux to test detection capabilities.
+ 
+Threat Hunting and Incident Response:
+ - Simulating attack scenarios using Mythic C2 and Kali Linux to test detection capabilities.
   - Responding to security incidents and analyzing artifacts to determine the root cause.
 
 Cloud Infrastructure Management:
@@ -38,9 +37,6 @@ Network Security Monitoring:
 The lab incorporates the following tools:
 - ELK Stack (Elasticsearch, Logstash, Kibana): For centralized log management and analysis.
 - Fleet Server: To manage and monitor endpoint agents.
-- Velociraptor: For endpoint monitoring, threat hunting, and digital forensics.
-- Wazuh: An open-source security monitoring platform for threat detection, integrity monitoring, and incident response.
-- Security Onion: A platform for intrusion detection, network security monitoring, and log management.
 - Kali Linux: Used for simulating attacks to test detection and response capabilities.
 - Mythic C2: A command and control framework for simulating adversary activities.
 - OS Ticket Server: For managing security alerts and incident tickets.
@@ -98,18 +94,6 @@ Configure each component to ensure seamless data flow and accessibility.
 Fleet Server and Elastic Agent Configuration:
 Set up Fleet Server to manage Elastic Agents.
 Deploy Elastic Agents on Windows and Linux endpoints to collect logs and metrics.
-
-Velociraptor Deployment:
-Install Velociraptor server and configure it for endpoint monitoring.
-Deploy Velociraptor agents on endpoints for threat hunting and forensic analysis.
-
-Wazuh Integration:
-Set up Wazuh manager and agents for comprehensive security monitoring.
-Integrate Wazuh with the ELK Stack for unified analysis.
-
-Security Onion Setup:
-Deploy Security Onion for network security monitoring and intrusion detection.
-Configure network taps or port mirroring to capture and analyze traffic.
 
 Attack Simulation:
 Set up Mythic C2 server to simulate adversary command and control operations.
